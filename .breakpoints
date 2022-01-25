@@ -7,6 +7,14 @@
         "version": 2,
         "index": 21
       }
+    ],
+    "Algorithm/Sort/Selection_Sort.py": [
+      {
+        "id": "5e665922-08ba-42ea-9ecf-f6713fc87b92",
+        "line": 17,
+        "version": 480,
+        "index": 383
+      }
     ]
   }
 }

@@ -11,3 +11,7 @@ for i in range(len(array)):
   array[i], array[min_index] = array[min_index], array[i] # 스와프
 
 print(array)
+
+# 시간 복잡도
+# N번 만큼 가장 작은 수를 찾아서 맨 앞으로 보내야 한다.
+# O(N^2)
