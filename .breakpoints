@@ -8,6 +8,22 @@
         "index": 21
       }
     ],
+    "Algorithm/ETC_Algorithm/Interval_Sum.py": [
+      {
+        "id": "8b477e04-3ae7-402b-b2e2-9f19c7330f52",
+        "line": 2,
+        "version": 603,
+        "index": 24
+      }
+    ],
+    "Algorithm/ETC_Algorithm/Prime_Number.py": [
+      {
+        "id": "91398145-efb8-40ff-915b-ca88a718cd01",
+        "line": 41,
+        "version": 1761,
+        "index": 905
+      }
+    ],
     "Algorithm/Shortest/Shortest_Algorithm.py": [
       {
         "id": "bfc29789-ba02-4e91-9a51-eacdd640ddcb",
