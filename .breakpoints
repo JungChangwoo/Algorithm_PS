@@ -4,8 +4,8 @@
       {
         "id": "333eceb5-2512-42b5-b77d-75ac61aef7f2",
         "line": 2,
-        "version": 2,
-        "index": 21
+        "version": 3,
+        "index": 24
       }
     ],
     "Algorithm/ETC_Algorithm/Interval_Sum.py": [
@@ -37,7 +37,7 @@
         "id": "5e665922-08ba-42ea-9ecf-f6713fc87b92",
         "line": 17,
         "version": 480,
-        "index": 383
+        "index": 760
       }
     ]
   }

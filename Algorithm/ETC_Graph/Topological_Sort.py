@@ -37,16 +37,16 @@ def topology_sort():
   for i in range(1, v+1):
     if indegree[i] == 0:
       q.append(i)
-    # 큐가 빌 때까지 반복
-    while q:
-      now = q.popleft()
-      result.append(now)
-      for i in graph[now]:
-        indegree[i] -= 1
-        if indegree[i] == 0:
-          q.append(i)
+  # 큐가 빌 때까지 반복
+  while q:
+    now = q.popleft()
+    result.append(now)
+    for i in graph[now]:
+      indegree[i] -= 1
+      if indegree[i] == 0:
+        q.append(i)
     # 위상정렬을 수행한 결과 출력 
-    for i in result:
-      print(i, end=' ')
+  for i in result:
+    print(i, end=' ')
 
 topology_sort()
