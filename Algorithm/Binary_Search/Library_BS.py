@@ -17,3 +17,7 @@ print(count_by_range(a, 4, 4))
 
 # 값이 [-1, 3] 범위에 있는 데이터 개수 출력
 print(count_by_range(a, -1, 3))
+
+# 값이 8인 데이터 찾기
+print(bisect_right(a, 8))
+print(bisect_left(a, 8))
