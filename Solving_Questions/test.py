@@ -1,6 +1,5 @@
-from itertools import product
-data = ['+', '-', '*', '/']
-result = list(product(data, repeat = 3))
-print(result)
-print(len(result))
+d = [0 for _ in range(10)]
 
+d[1] = False
+d[2] = True
+print(d)
