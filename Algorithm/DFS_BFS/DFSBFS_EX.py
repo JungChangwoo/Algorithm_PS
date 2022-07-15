@@ -40,3 +40,4 @@ def BFS(graph, start, visited):
         queue.append(i)
 
 BFS(graph, 1, visited2)
+    
