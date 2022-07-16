@@ -73,27 +73,73 @@ while True:
   shark = (x, y)
 
 print(count)
-# 이동
-# BFS로 먹을 수 있는 물고기를 찾음(이때, 이동가능유무를 확인하면서)
-# 더이상 먹을 수 있는 물고기가 없다면 끝
-# 만약 1개라면 바로 이동
-# 여러 개라면 가장 위의 왼쪽 (i가 작고 j가 작은 것)
-# 섭취 (크기 증가 유무 확인)
+###################################################################
+# 이코테 답
+from collections import deque
+INF = int(1e9)
 
+n = int(input())
 
-# [이동 유무 및 섭취]
-# > 지나갈 수 없음
-# = 지나갈 수 있음
-# < 먹을 수 있으며 지나갈 수 있음
+array = []
+for i in range(n):
+  array.append(list(map(int, input().split())))
 
-# [이동 방식]
-# 더이상 먹을 수 있는 물고기가 없다면 끝
-# 물고기가 1마리 = 물고기 먹으러 
-# 물고기가 여러 마리 가장 가까운 물고기 (물고기 중 가장 위 -> 가장 왼) BFS
+now_size = 2
+now_x, now_y = 0, 0
 
-# [물고기 섭취]
-# 먹은 흔적 X
-# 크기만큼의 물고기 수를 섭취하면 크기 1증가
-# 처음 상어 크기 2
+for i in range(n):
+  for j in range(n):
+    if array[i][j] == 9:
+      now_x, now_y = i, j
+      array[i][j] = 0
 
+dx = [-1, 0, 1, 0]
+dy = [0, 1, 0, -1]
 
+def bfs():
+  dist = [[-1] * n for _ in range(n)]
+  dist[now_x][now_y] = 0
+  q = deque([(now_x, now_y)])
+  while q:
+    x, y = q.popleft()
+    for i in range(4):
+      nx = x + dx[i]
+      ny = y + dy[i]
+      if 0 <= nx and nx < n and 0 <= ny and ny < n:
+        if dist[nx][ny] == -1 and array[nx][ny] <= now_size:
+          dist[nx][ny] = dist[x][y] + 1
+          q.append((nx, ny))
+  return dist
+
+def find(dist):
+  x, y = 0, 0
+  min_dist = INF
+  # 가장 위부터 왼쪽부터 찾음
+  for i in range(n):
+    for j in range(n): # 갈 수 있고 먹을 수 있으며 물고기여야함
+      if dist[i][j] != -1 and array[i][j] < now_size and 1 <= array[i][j]:
+        if dist[i][j] < min_dist:
+          min_dist = dist[i][j]
+          x, y = i, j
+  if min_dist == INF:
+    return None
+  else:
+    return x, y, min_dist
+
+result = 0
+ate = 0
+while True:
+  value = find(bfs())
+  if value == None:
+    print(result)
+    break;
+  else:
+    now_x, now_y = value[0], value[1]
+    result += value[2]
+    array[now_x][now_y] = 0
+    ate += 1
+    if ate == now_size:
+      now_size += 1
+      ate = 0
+  
+  
