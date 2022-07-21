@@ -1,5 +1,4 @@
-d = [0 for _ in range(10)]
-
-d[1] = False
-d[2] = True
-print(d)
+for i in range(4):
+  while True:
+    print("test")
+    break
