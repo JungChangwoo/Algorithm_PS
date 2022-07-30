@@ -3,15 +3,13 @@
 import sys
 n, k = map(int, sys.stdin.readline().rstrip().split())
 INF = int(1e9)
-graph = [[] for _ in range(100001)]
-for i in range(100000):
+graph = [[] for _ in range(200001)]
+for i in range(100001):
   if i-1 >= 0:
     graph[i].append((i-1, 1))
-  if i+1 <= 100000:
-    graph[i].append((i+1, 1))
-  if i*2 <= 100000:
-    graph[i].append((i*2, 0))
-distance = [INF] * 100001
+  graph[i].append((i+1, 1))
+  graph[i].append((i*2, 0))
+distance = [INF] * 200001
 
 import heapq
 def dikstra(start):
