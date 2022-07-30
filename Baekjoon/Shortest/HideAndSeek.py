@@ -3,39 +3,31 @@
 import sys
 n, k = map(int, sys.stdin.readline().rstrip().split())
 INF = int(1e9)
-distance = [INF] * 1000001
+graph = [[] for _ in range(100001)]
+for i in range(100000):
+  if i-1 >= 0:
+    graph[i].append((i-1, 1))
+  if i+1 <= 100000:
+    graph[i].append((i+1, 1))
+  if i*2 <= 100000:
+    graph[i].append((i*2, 0))
+distance = [INF] * 100001
 
-from collections import deque
-def HideAndSeek(start, end):
-  q = deque([(0, start)])
+import heapq
+def dikstra(start):
+  q = []
+  heapq.heappush(q, (0, start))
   distance[start] = 0
   while q:
-    dist, now = q.popleft()
-    if now == end:
-      return dist
-    if now <= 0 or now >= 100000:
-      continue
+    dist, now = heapq.heappop(q)
     if dist > distance[now]:
       continue
-    # -1 
-    next = now - 1
-    cost = dist + 1
-    if cost < distance[next]:
-      distance[next] = cost
-      q.append((cost, next))
-    # +1
-    next = now + 1
-    cost = dist + 1
-    if cost < distance[next]:
-      distance[next] = cost
-      q.append((cost, next))
-    # *2
-    next = now * 2
-    cost = dist + 0
-    if cost < distance[next]:
-      distance[next] = cost
-      q.append((cost, next))
+    for i in graph[now]:
+      cost = dist + i[1]
+      if cost < distance[i[0]]:
+        distance[i[0]] = cost
+        heapq.heappush(q, (cost, i[0]))
 
-result = HideAndSeek(n, k)
-print(result)
+dikstra(n)
+print(distance[k])
   
