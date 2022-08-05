@@ -58,9 +58,10 @@ def move_shark():
                 break
   return new_graph
 time = 0
+update_smell()
 while True:
-  update_smell()
   graph = move_shark()
+  update_smell()
   time += 1
   isOnlyOne = True
   # 1번 상어만 남아있는지 확인
