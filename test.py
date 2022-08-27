@@ -1,6 +1,5 @@
 import sys
 from collections import deque
-data = sys.stdin.readline()
-data.
-array = deque(data)
-print(array)
+q = deque()
+for i in range(1, 6):
+  q.append(i)
