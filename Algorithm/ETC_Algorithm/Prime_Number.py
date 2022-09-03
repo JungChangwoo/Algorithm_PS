@@ -14,7 +14,6 @@ print(is_prime_number(7))
 # <개선된 알고리즘)
 # - 모든 약수는 가운데 약수를 기준으로 곱셈 연산에 대해 대칭을 이루는 것을 알 수 있다.
 import math
-
 def is_prime_number2(x):
   for i in range(2, int(math.sqrt(x)) +1):
     if x % i == 0:
@@ -34,7 +33,6 @@ print(is_prime_number(7))
 # 4. 더 이상 반복할 수 없을 때까지 2번과 3번의 과정을 반복한다.
 
 import math
-
 n = 1000 # 2부터 1,000까지의 모든 수에 대하여 소수 판별
 # 처음엔 모든 소가 소수(True)인 것으로 초기화한다.(0과 1은 제외)
 array = [True for i in range(n+1)]
