@@ -2,19 +2,18 @@
 # 12738번
 
 import sys
+
 n = int(sys.stdin.readline().rstrip())
 array = list(map(int, sys.stdin.readline().split()))
-dp = [1]
-x = [array[0]] 
+dp = [array[0]]
 
 from bisect import bisect_left
 for i in range(1, n):
-    if array[i] > x[-1]:
-        dp.append(dp[-1] + 1)
-        x.append(array[i])
+    if array[i] > dp[-1]:
+        dp.append(array[i])
     else:
-        idx = bisect_left(x, array[i])
-        x[idx] = array[i]
+        idx = bisect_left(dp, array[i])
+        dp[idx] = array[i]
+        print(dp)
 
-print(dp[-1])
-  
+print(len(dp))
