@@ -1,3 +1,3 @@
-array1 = [1, 2, 3, 4]
-array2 = [5, 6, 7]
-
+stack = [1,2,3,4,5]
+stack.pop()
+print(stack)
