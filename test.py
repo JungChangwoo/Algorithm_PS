@@ -1,4 +1,5 @@
-for i in range(4):
-  while True:
-    break
-    
+a = 1
+a = not a
+print(a)
+a = not a
+print(a == 1)

@@ -48,6 +48,20 @@
         "index": 560
       }
     ],
+    "DanceDanceRevolution.py": [
+      {
+        "id": "d01fd542-f1d9-42fd-bb20-2674901a4e1a",
+        "line": 15,
+        "version": 3074,
+        "index": 229
+      },
+      {
+        "id": "b7e043ca-e4f5-4ca4-9f60-aa275042778e",
+        "line": 22,
+        "version": 3711,
+        "index": 410
+      }
+    ],
     "IntTriangle.py": [
       {
         "id": "31cded90-0d77-4f02-b532-87eb6821219a",
