@@ -101,6 +101,14 @@
         "version": 2371,
         "index": 364
       }
+    ],
+    "test2.py": [
+      {
+        "id": "d233ba1a-d629-4566-8cb0-50fff2e59074",
+        "line": 1,
+        "version": 0,
+        "index": 0
+      }
     ]
   }
 }
