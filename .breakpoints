@@ -51,9 +51,9 @@
     "Baekjoon/Tree/RoadNetwork.py": [
       {
         "id": "7f6b3fef-7808-4cd3-8446-a6b801f3f46d",
-        "line": 24,
-        "version": 1,
-        "index": 577
+        "line": 14,
+        "version": 226,
+        "index": 303
       }
     ],
     "DanceDanceRevolution.py": [
@@ -68,6 +68,14 @@
         "line": 22,
         "version": 3711,
         "index": 410
+      }
+    ],
+    "HandongSalesman.py": [
+      {
+        "id": "32bc6b30-7609-4377-ba0b-c9f9d564fe37",
+        "line": 10,
+        "version": 1562,
+        "index": 202
       }
     ],
     "IntTriangle.py": [
