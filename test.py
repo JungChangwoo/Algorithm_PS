@@ -1,4 +1,5 @@
-import heapq
 dict = {}
-dict[1] += 1
-print(dict)
+dict['a'] = 2
+dict['b'] = 3
+array = list(dict.values())
+print(dict.values(), array)
