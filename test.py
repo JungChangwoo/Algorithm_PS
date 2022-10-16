@@ -1,6 +1,18 @@
-a = 10
-b = 12
-for i in range(max(a, b), (a*b) + 1):
-  if i % a == 0 and i % b == 0:
-    print(i)
-    break
+def DSLR(value, oper):
+  if oper == 'D':
+    return (value * 2) % 10000
+  elif oper == 'S':
+    if value == 0:
+      return 9999
+    value -= 1
+    return value
+  elif oper == 'L':
+    value = ((value * 10) + (value // 1000)) % 10000
+    return value
+  else:
+    value = ((value // 10) + ((value % 10) * 1000)) % 10000
+    return value
+print(DSLR(1234, 'D'))
+print(DSLR(1234, 'S'))
+print(DSLR(1000, 'L'))
+print(DSLR(1, 'R'))
