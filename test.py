@@ -1,3 +1,10 @@
 import sys
-visited = [False] * (1000000000 + 1)
-print(sys.getsizeof(visited))
+sys.setrecursionlimit(10**9)
+array = []
+while True:
+  try:
+    data = int(sys.stdin.readline().rstrip())
+    array.append(data)
+  except:
+    break
+
