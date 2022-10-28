@@ -1,10 +1,3 @@
-import sys
-sys.setrecursionlimit(10**9)
-array = []
-while True:
-  try:
-    data = int(sys.stdin.readline().rstrip())
-    array.append(data)
-  except:
-    break
-
+array = [1,2,3,4,5]
+bomb = [3, 4]
+print(array[-3:-1] == bomb)
