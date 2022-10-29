@@ -1,4 +1,4 @@
-# [쿼드트리]
+sq# [쿼드트리]
 # 1992번
 import sys
 sys.setrecursionlimit(10**9)
