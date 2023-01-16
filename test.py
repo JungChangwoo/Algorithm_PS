@@ -1,5 +1,3 @@
-word = ''
-if word:
-  print('a')
-else:
-  print('b')
+from collections import defaultdict
+d = defaultdict(int)
+print(d['test'])
