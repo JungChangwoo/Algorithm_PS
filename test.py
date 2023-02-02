@@ -1,3 +1,5 @@
-from collections import defaultdict
-d = defaultdict(int)
-print(d['test'])
+u = 'abs'
+v = u[:3]
+p = u[3:]
+print(v)
+print(p)
