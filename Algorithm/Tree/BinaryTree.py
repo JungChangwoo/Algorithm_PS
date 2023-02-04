@@ -15,7 +15,7 @@ class BinaryTree():
 
   def preorder(self, now):
     if now != None:
-      print(now.item, end=' ')
+      print(now.data, end=' ')
       if now.left:
         self.preorder(now.left)
       if now.right:
@@ -27,13 +27,13 @@ class BinaryTree():
         self.postorder(now.left)
       if now.right:
         self.postorder(now.right)
-      print(now.item, end=' ')
+      print(now.data, end=' ')
       
   def inorder(self, now):
     if now != None:
       if now.left:
         self.inorder(now.left)
-      print(now.item, end=' ')
+      print(now.data, end=' ')
       if now.right:
         self.inorder(now.right)
 
@@ -42,7 +42,7 @@ class BinaryTree():
     q.append(now)
     while q:
       t = q.pop(0)
-      print(t.item, end=' ')
+      print(t.data, end=' ')
       if t.left:
         q.append(t.left)
       if t.right:
